@@ -1,6 +1,6 @@
 const Discord = require("discord.js");
 const client = new Discord.Client();
-var prefix = ".";
+var prefix = "!";
 client.on("message", message => {
 
             if (message.content.startsWith(prefix + "bc")) {
@@ -23,7 +23,7 @@ client.on('ready', () => {
       console.log(`ON ${client.guilds.size} Servers '     Script By : e2k ' `);
     console.log(`----------------`);
   console.log(`Logged in as ${client.user.tag}!`);
-client.user.setGame(`Tomatoe I .help `,"http://twitch.tv/S-F")
+client.user.setGame(`Tokyo I !help `,"http://twitch.tv/S-F")
 client.user.setStatus("dnd")
 });
 
@@ -63,7 +63,7 @@ if (message.content.startsWith(prefix + `cat`)) {
 
 
 client.on('message', msg => {
-  if(msg.content.startsWith('.link')) {
+  if(msg.content.startsWith('!link')) {
   if(msg.channel.type === 'dm') return;
 const user = msg.mentions.users.first();
 if(!user) return msg.channel.send('``' + '**قم بتحديد بوت**' + '``')
@@ -102,7 +102,7 @@ client.on('message', async message => {
 
 
 client.on('message', message => {
-  if(message.content == '.bans'){
+  if(message.content == '!bans'){
       message.guild.fetchBans().then(bans => {
           bans.forEach(user => {
              message.channel.send('\`#\` <@'+ user.id + '>');
@@ -271,19 +271,20 @@ client.on('message', message => {
 
 
     client.on('message' , message => {
-    if (message.content === '.help') {
+    if (message.content === '!help') {
              let embed = new Discord.RichEmbed()
 
           .setThumbnail(message.author.avatarURL)
           .addField("**🌐 الأوامر العامه**","** **")
-          .addField("**.avatar**","**عرض صورتك الشخصية**")
-          .addField("**.server**","**عرض جميع معلومات السيرفر**")
-           .addField("**.id**","**عرض معلومات عنك**")
-       .addField("**.help**","**ارسال هذه الأوامر للعضو في الخاص**")
-       .addField("**.Bping**","** عرض سرعة اتصال البوت**")
-       .addField("**.cat**","** لصوره قطط**")
+          .addField("**!avatar**","**عرض صورتك الشخصية**")
+          .addField("**!server**","**عرض جميع معلومات السيرفر**")
+           .addField("**!id**","**عرض معلومات عنك**")
+       .addField("**!help**","**ارسال هذه الأوامر للعضو في الخاص**")
+       .addField("**!Bping**","** عرض سرعة اتصال البوت**")
+       .addField("**!cat**","** لصوره قطط**")
        .addField("**هل تعلم**","** لعبه هل تعلم**")
        .addField("**رابط**","** لجب رابط السيرفر**")
+       .addField("البوت للحين تحت التعديل")
     .setColor('RANDOM')
       message.author.sendEmbed(embed);
         }
@@ -294,7 +295,7 @@ client.on('message', message => {
                 if (message.content.startsWith(".help")) {
          let embed = new Discord.RichEmbed()
     .setThumbnail(message.author.avatarURL)
-    .addField('     Help ' ,' روح شيك خاصك  ✉  ')
+    .addField('     Help ' ,' تقدر تشوف الهلب ف الخاص  ✉  ')
     .setColor('#B101FC')
       message.channel.sendEmbed(embed);
         }
@@ -313,10 +314,10 @@ client.on('message', message => {
 
           .setThumbnail(message.author.avatarURL)
 .addField("**:tools:  الأوامر الادرايه**","** **")
-           .addField("**.mute**","**لعطاء شخص ميوت**")
-           .addField("**.unmute**","**لفك الميوت عن احد**")
-       .addField("**.clear - مسح**","** لمسح الشات**")
-       .addField("**.bc**","** لارسال رساله الي جميع من ف السيرفر**")
+           .addField("**!mute**","**لعطاء شخص ميوت**")
+           .addField("**!unmute**","**لفك الميوت عن احد**")
+       .addField("**!clear - مسح**","** لمسح الشات**")
+       .addField("**!bc**","** لارسال رساله الي جميع من ف السيرفر**")
     .setColor('RANDOM')
       message.author.sendEmbed(embed);
         }
@@ -327,7 +328,7 @@ client.on('message', message => {
                 if (message.content.startsWith("kosamkafasdgj,.,.,.help")) {
          let embed = new Discord.RichEmbed()
     .setThumbnail(message.author.avatarURL)
-    .addField('     Help ' ,' روح شيك خاصك  ✉  ')
+    .addField('     Help ' ,' تقدر تشوف الهلب ف الخاص  ✉  ')
     .setColor('#B101FC')
       message.channel.sendEmbed(embed);
         }
@@ -550,7 +551,7 @@ var cats = [
 
 
 client.on('message', message => {
-  if (message.content.startsWith(".avatar")) {
+  if (message.content.startsWith("!avatar")) {
       var mentionned = message.mentions.users.first();
   var x5bzm;
     if(mentionned){
@@ -577,7 +578,7 @@ client.on('message', msg => {
 
 client.on('message', message => {
   let args = message.content.split(' ').slice(1);
-if(message.content.split(' ')[0] == '.color'){
+if(message.content.split(' ')[0] == '!color'){
    const embedd = new Discord.RichEmbed()
 .setFooter('Requested by '+message.author.username, message.author.avatarURL)
 .setDescription(`**لا يوجد لون بهذا الأسم ** :x: `)
@@ -630,15 +631,13 @@ if (ra3d.content ===  prefix + 'cc'){
 
 client.on('message', message => {
   if (message.author.bot) return;
-   if (message.content === prefix + "bot owner") {
+   if (message.content === prefix + "sup") {
 
 
 message.author.sendMessage(`
-__~~Speical System .~~__
-╱╭╮╭╮╱╱╱╱╭╮╭━╮╱╱╱╱╱╱╭━━╮╱╱╱
-♕ ♕ ♕ ♕ ♕ ♕ ♕ ♕ ♕ ♕ ♕ ♕ ♕ ♕ ♕ ♕ ♕ ♕ ♕ ♕ 
+__~~Tokyo Sestem.~~__
 __created By__: @!                     - e2k.k ♪#4211 
-Server Support : https://discord.gg/jYdSQr
+Server Support : Soon!
 bot link :   https://discordapp.com/oauth2/authorize?client_id=487160671704973312&scope=bot&permissions=384064
 `);
 
@@ -737,7 +736,7 @@ client.on('message', msg => {
 
 client.on('message' , message => {
   var prefix = ".";
-  if(message.content.startsWith(prefix + 'تذكره')) {
+  if(message.content.startsWith(prefix + 'new')) {
       message.channel.send('`تم عمل التذكره`');
       client.users.get('428568185277775872').send({embed: new Discord.RichEmbed()
       .setDescription(`**<@${message.author.id}> لديه دعوة تذكرة له**`)
@@ -747,7 +746,7 @@ client.on('message' , message => {
 
 
 client.on("message", message => {
-  if (message.content === ".Bping") {
+  if (message.content === "!Bping") {
     const embed = new Discord.RichEmbed()
 .setColor("RANDOM")
 .setTitle('**Pong ! **')
@@ -828,7 +827,7 @@ client.on('message', message => {
 
 
 client.on('message', message => {/// الفا كود | Emoko#0001
-     if (message.content === ".Bservers") {
+     if (message.content === "!Bservers") {
          if(!message.channel.guild) return;
      let embed = new Discord.RichEmbed()
   .setColor("RANDOM") /// الفا كود | Emoko#0001
@@ -845,7 +844,7 @@ client.on('message', message => {/// الفا كود | Emoko#0001
 
 client.on ("guildMemberAdd", member => {
   
-   var role = member.guild.roles.find ("name", "❊ Speical's");
+   var role = member.guild.roles.find ("name", "");
    member.addRole (role);
   
 })
@@ -861,7 +860,7 @@ client.on ("guildMemberRemove", member => {
 
 client.on('message', message => {
               if (!message.channel.guild) return;
-      if(message.content =='.member')  /// By KillerFox_ حقوق الفا كودز
+      if(message.content =='!member')  /// By KillerFox_ حقوق الفا كودز
       var IzRo = new Discord.RichEmbed() /// By KillerFox_ حقوق الفا كودز
       .setThumbnail(message.author.avatarURL)  /// By KillerFox_ حقوق الفا كودز
       .setFooter(message.author.username, message.author.avatarURL) /// الفا كودز
@@ -883,7 +882,7 @@ client.on('message', message => {
 
 client.on('message', msg => {
   if(msg.content === '.')
-  msg.channel.send('** Welcome To __Speical Community__ :champagne_glass: . **')
+  msg.channel.send('** Welcome To __# Tokyo Server__ :champagne_glass: . **')
 });
 
 
