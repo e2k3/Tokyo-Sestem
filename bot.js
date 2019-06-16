@@ -292,7 +292,7 @@ client.on('message', message => {
 
 
     client.on('message', message => {
-                if (message.content.startsWith(".help")) {
+                if (message.content.startsWith("!help")) {
          let embed = new Discord.RichEmbed()
     .setThumbnail(message.author.avatarURL)
     .addField('     Help ' ,' تقدر تشوف الهلب ف الخاص  ✉  ')
@@ -309,7 +309,7 @@ client.on('message', message => {
 
 
     client.on('message' , message => {
-    if (message.content === '.help') {
+    if (message.content === '!help') {
              let embed = new Discord.RichEmbed()
 
           .setThumbnail(message.author.avatarURL)
