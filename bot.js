@@ -75,8 +75,8 @@ msg.channel.send(`**Bot InviteURL : ** https://discordapp.com/oauth2/authorize?c
 
 
 client.on('message', msg => {
-  if(msg.content === '.buy')
-  msg.channel.send('**افتح تكت عن طريقه .new لكي تحصل علي رتبه بائع**')
+  if(msg.content === '!buy')
+  msg.channel.send('**افتح تكت عن طريق -new لكي تحصل علي رتبه بائع**')
 });
 
 
@@ -571,7 +571,7 @@ client.on('message', message => {
 
 
 client.on('message', msg => {
-  if(msg.content === '.ce')
+  if(msg.content === '!ce')
   msg.reply('**هذا الامر سوف يكون متاح قريبا جدا انتظرو!**')
 });
   
@@ -665,7 +665,7 @@ client.on('message', message => {
   if (!message.content.startsWith(prefix)) return;
   var args = message.content.split(' ').slice(1);
   var argresult = args.join(' ');
-  if (message.author.id !== "452191687159185409") return;
+  if (message.author.id !== "551435927868932099") return;
  
  
   if (message.content.startsWith(prefix + 'setwatch')) {
@@ -762,7 +762,7 @@ client.on('message', message => {
   if (!message.content.startsWith(prefix)) return;
   var args = message.content.split(' ').slice(1);
   var argresult = args.join(' ');
-  if (message.author.id !== "428568185277775872")
+  if (message.author.id !== "551435927868932099")
 return;
 
 
