@@ -882,7 +882,7 @@ client.on('message', message => {
 
 client.on('message', msg => {
   if(msg.content === '.')
-  msg.channel.send('** Welcome To __# Tokyo Server__ :champagne_glass: . **')
+  msg.channel.send('** Welcome To __# Tokyo Server__ :champagne_glass: .#prove-your-self **')
 });
 
 
